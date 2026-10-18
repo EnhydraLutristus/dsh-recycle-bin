@@ -1,0 +1,4 @@
+{
+  "meta.title": "Recycle bin",
+  "meta.description": "Drop workspace sessions into the recycle bin: they stay for 14 days, then are deleted permanently. Restore or delete right away at any time."
+}

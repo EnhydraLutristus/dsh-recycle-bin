@@ -1,0 +1,4 @@
+# 回收站：会话回收、恢复、14 天到期自动删除。
+- insert:
+    - id: dsh-recycle-bin
+      name: 'dsh-recycle-bin'

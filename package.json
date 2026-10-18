@@ -1,0 +1,39 @@
+{
+  "name": "dsh-recycle-bin",
+  "version": "0.2.7",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "回收站：把工作区会话移入回收站，保留 14 天后自动永久删除，也可立即手动删除或恢复。",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
+
+
+
+
+
