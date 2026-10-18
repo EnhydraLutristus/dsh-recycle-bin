@@ -2,6 +2,38 @@
 
 把工作区里的会话移入回收站，保留 14 天后自动永久删除；也可以随时恢复或立即删除。
 
+## 安装（给其他人）
+
+仓库地址：<https://github.com/EnhydraLutristus/dsh-recycle-bin>
+
+要求：DeepSeek Harness 0.2.x（本插件在 `0.2.1-rc.2` 上开发和验证；用到的是 `sidebar.panellist`、`main`、`sidebar.session.row.hover`、`shell.overlay` 四个槽位和 `webServer` 路由，老版本可能没有这些槽位）。
+
+**方式一：直接按 GitHub 地址安装**（Harness 支持 pnpm 的 `github:` 规格）
+
+在 Harness 里调用 `plugin_manager` 的 `install_bundle`，target 填：
+
+```
+github:EnhydraLutristus/dsh-recycle-bin
+```
+
+安装完成后条目为 `include:dsh-recycle-bin`，侧边栏底部会出现回收站图标。若没出现，按 `Ctrl+R` 刷新页面；仍未出现就把它禁用再启用一次。
+
+**方式二：先克隆，再从本地目录安装**（想改代码或锁定版本时用）
+
+```bash
+git clone https://github.com/EnhydraLutristus/dsh-recycle-bin.git
+```
+
+然后 `install_bundle` 的 target 填克隆目录的**绝对路径**（例如 `D:\plugins\dsh-recycle-bin`）。本地安装是链接（`link:`），改完代码禁用/启用一次即可生效。
+
+**更新**
+
+```bash
+git pull            # 本地目录安装时
+```
+
+或重新执行一次 `install_bundle`（GitHub 规格）；更新后在插件管理器里禁用再启用。
+
 ## 界面在哪里
 
 侧边栏底部、Settings 之上的图标区（`sidebar.panellist`）多了一个回收站图标，排在其它面板图标之后。点击它，主区域会切换到回收站面板。

@@ -30,10 +30,22 @@
         "@deepseek-ai/dsh-client-locale"
       ]
     }
-  }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnhydraLutristus/dsh-recycle-bin.git"
+  },
+  "homepage": "https://github.com/EnhydraLutristus/dsh-recycle-bin#readme",
+  "bugs": {
+    "url": "https://github.com/EnhydraLutristus/dsh-recycle-bin/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "recycle-bin",
+    "trash",
+    "session"
+  ]
 }
-
-
-
-
-
